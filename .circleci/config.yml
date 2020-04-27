@@ -27,7 +27,18 @@ jobs:
       
       - run:
          name: "cd into project folder"
-         command: cd onsgroupproject
+         command: pwd
+         whoami
+         #export GRADLE_HOME=/opt/gradle/gradle-5.6.4
+         #export PATH=$GRADLE_HOME/bin:$PATH
+         cd onsgroupproject
+         echo "creating database"
+         cd src/main/resources
+         mysql -u root -p_t5rasdifouaorhto5qiXKCVJOUIE£JHTO < ons_database_creation.sql
+         #cd ../../../
+         #gradle -version
+         #gradle build
+         #gradle assemble
 
       # Download and cache dependencies
       #- restore_cache:
@@ -45,3 +56,10 @@ jobs:
 
       # run tests!
       - run: gradle build
+      
+      - run: gradle assemble
+      
+      - run:
+         name: "cd into project folder"
+         command:cd onsgroupproject/build/libs
+         java -jar onsgroupproject-0.0.1-SNAPSHOT.jar
