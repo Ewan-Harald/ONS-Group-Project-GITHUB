@@ -27,8 +27,7 @@ jobs:
       
       - run:
          name: "cd into project folder"
-         command: 
-         "cd onsgroupproject"
+         command: cd onsgroupproject
 
       # Download and cache dependencies
       - restore_cache:
