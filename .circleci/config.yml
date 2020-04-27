@@ -25,14 +25,12 @@ jobs:
     steps:
       - checkout
       
-      - run:
-         name: "cd into project folder"
-         command: pwd
-         whoami
-         cd onsgroupproject
-         echo "creating database"
-         cd src/main/resources
-         mysql -u root -p_t5rasdifouaorhto5qiXKCVJOUIE£JHTO < ons_database_creation.sql
+      - run: pwd
+      - run: whoami
+      - run: cd onsgroupproject
+      - run: echo "creating database"
+      - run: cd src/main/resources
+      #- run: mysql -u root -p_t5rasdifouaorhto5qiXKCVJOUIE£JHTO < ons_database_creation.sql
          
       # Download and cache dependencies
       #- restore_cache:
