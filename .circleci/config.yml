@@ -51,7 +51,5 @@ jobs:
       
       - run: gradle assemble
       
-      - run:
-         name: "cd into project folder"
-         command:cd onsgroupproject/build/libs
-         java -jar onsgroupproject-0.0.1-SNAPSHOT.jar
+      - run: cd onsgroupproject/build/libs
+      - run: java -jar onsgroupproject-0.0.1-SNAPSHOT.jar
