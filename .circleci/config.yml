@@ -27,12 +27,12 @@ jobs:
       
       - run:
         command: |
-                 pwd
-                 whoami
-                 cd onsgroupproject
-                 pwd
-                 echo "creating database"
-                 cd src/main/resources
+         pwd
+         whoami
+         cd onsgroupproject
+         pwd
+         echo "creating database"
+         cd src/main/resources
                   
          
       # Download and cache dependencies
